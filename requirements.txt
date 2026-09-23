@@ -1,4 +1,8 @@
+PySide6
+RinUI
+PyOpenGL
+PyOpenGL_accelerate
+mss
 opencv-python
 numpy
-pygame
-mss
+Pillow

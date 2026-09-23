@@ -6,6 +6,15 @@
 *.npz
 *.csv
 
+# 配置被写坏时程序留下的备份 (见 glass_overlay._load_cfg)
+config.json.bak
+
+# 例外: 应用图标。assets/ 里的两份是随包资源 (关于页、标题栏、EXE 图标都要读),
+# 必须进仓库, 否则别人 clone 下来图标是空的。根目录的 icon.png 是原始素材, 由
+# build_exe.py 生成 assets/ 那两份, 不入库 (4.6MB)。
+!assets/icon.png
+!assets/icon.ico
+
 # IDE / Python 缓存
 .vscode/
 __pycache__/
@@ -16,7 +25,15 @@ build/
 dist/
 *.spec
 *.log
+build_log.txt
+
+# 离屏 / 冒烟测试产物
+offscreen_result.png
+smoke_widget.png
 
 # 开发中间工具（非核心代码）
 collect.py
 wininfo.py
+
+# RinUI 运行时写的主题配置 (首次运行后出现在项目/EXE 旁)
+RinUI/

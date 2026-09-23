@@ -158,7 +158,9 @@ class AngleTracker:
         for pair in matches:
             if len(pair) == 2 and pair[0].distance < self.ratio * pair[1].distance:
                 good.append(pair[0])
-        if len(good) < MIN_MATCHES:
+        # findHomography 至少要 4 个点, 否则抛 cv2.error。MIN_MATCHES 来自 config,
+        # 用户可能调得很低, 所以这里用 max(4, MIN_MATCHES) 兜底。
+        if len(good) < max(4, MIN_MATCHES):
             return None, len(good), good, None, None
 
         src = np.float32([kp1[m.queryIdx].pt for m in good]).reshape(-1, 1, 2)

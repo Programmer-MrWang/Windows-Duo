@@ -1,0 +1,21 @@
+{
+  "camera_index": 0,
+  "nfeatures": 1200,
+  "ratio": 0.75,
+  "min_matches": 12,
+  "rekey_deg": 6.9,
+  "max_step_deg": 17.2,
+  "anchor_spacing_deg": 12.0,
+  "anchor_match_range_deg": 25.0,
+  "anchor_min_inliers": 15,
+  "scale": 1.1,
+  "sign": -1,
+  "refresh_hz": 3,
+  "max_tilt_deg": 62.0,
+  "eye_dist_h": 2.0,
+  "blur_spread": 0.42,
+  "darkening": 0.001,
+  "max_taps": 32,
+  "smoothing": 0.22,
+  "show_threshold": 0.002
+}
